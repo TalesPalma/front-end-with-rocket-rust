@@ -5,7 +5,10 @@ mod services;
 
 extern crate rocket;
 use controllers::*;
-use rocket::{launch, routes};
+use rocket::{
+    fs::{relative, FileServer},
+    launch, routes,
+};
 use rocket_dyn_templates::Template;
 
 #[launch]
@@ -16,8 +19,10 @@ fn rocket() -> _ {
             routes![
                 home_controller::index,
                 clients_contoller::clientes,
-                home_controller::hello
+                home_controller::hello,
+                sobre_controller::sobre
             ],
         )
+        .mount("/static", FileServer::from(relative!("static")))
         .attach(Template::fairing())
 }
