@@ -1,0 +1,80 @@
+{% extends 'layouts/application' %}
+{% block title %}Home{% endblock title %}
+{% block title_page %}Welcome to My Site{% endblock title_page %}
+{% block content %}
+<head>
+      <style>
+       body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .jumbotron {
+      background-image: url('https://via.placeholder.com/1500x600');
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+      margin-bottom: 0;
+    }
+
+    .feature {
+      background-color: #ffffff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .feature h3 {
+      color: #333333;
+    }
+
+    .feature p {
+      color: #666666;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Bem-vindo ao Meu Site</h1>
+      <p class="lead">Uma breve descrição do que seu site oferece.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a>
+    </div>
+  </div>
+
+  <!-- Recursos/Features -->
+  <div class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-rocket fa-3x mb-3"></i>
+          <h3>Feature 1</h3>
+          <p>Descrição breve do recurso ou serviço oferecido.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-globe fa-3x mb-3"></i>
+          <h3>Feature 2</h3>
+          <p>Descrição breve do recurso ou serviço oferecido.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-heart fa-3x mb-3"></i>
+          <h3>Feature 3</h3>
+          <p>Descrição breve do recurso ou serviço oferecido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+ 
+

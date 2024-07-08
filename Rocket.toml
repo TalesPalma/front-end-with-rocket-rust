@@ -1,0 +1,14 @@
+[global]
+# Configurações globais para todos os ambientes
+address = "127.0.0.1"
+profile = "debug"
+port = 8000
+workers = 1
+# secret_key = [randomly generated at launch]
+secret_key = "59e4ddc7e65d33ab5029d9da120ea594165550cd0b2ab25f9f5a230dd85832bd"
+
+[debug]
+# Configurações para o ambiente de desenvolvimento
+
+[release]
+# Configurações para o ambiente de produção

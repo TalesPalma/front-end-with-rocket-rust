@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Sistema{% endblock %}</title>
+    <link href="css/style.css" rel="stylesheet">
+    {%include 'partials/_head' %}
+</head>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{%include 'partials/_nav' %}
+    </nav>
+  <div class="container mt-4 mb-4 text-center text-uppercase  title  ">
+    <h1>{% block title_page%}{%endblock%}</h1>
+  </div>
+<body>
+    {% block content %}{% endblock %}
+</body>
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+       {% include 'partials/_footer' %}
+   </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
