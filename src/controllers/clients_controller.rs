@@ -2,6 +2,7 @@ use rocket::{form::Form, get, post};
 use rocket_dyn_templates::{context, Template};
 
 use crate::models::client_form::ClientForm;
+use crate::services::client_service;
 use crate::{models::client::Client, services::client_service::get_clients};
 #[get("/clients")]
 pub fn clients() -> Template {
@@ -18,7 +19,7 @@ pub fn new() -> Template {
 pub fn created(client_form: Form<ClientForm>) -> Template {
     let new_client = client_form.into_inner();
 
-    let mut clients = get_clients();
+    let mut clients = client_service::get_clients();
     clients.push(Client {
         id: 0,
         name: new_client.name.clone(),
@@ -30,9 +31,18 @@ pub fn created(client_form: Form<ClientForm>) -> Template {
 
 #[get("/clients/<id>/edit")]
 pub fn edit(id: i32) -> Template {
-    if let Some(client) = get_clients().iter().find(|c| c.id == id) {
+    if let Some(client) = client_service::get_clients_by_id(id) {
         Template::render("clients/edit", context! { client: &client})
     } else {
-        Template::render("clients/index", context! {clients_list: &get_clients()})
+        Template::render(
+            "clients/index",
+            context! {clients_list: client_service::get_clients()},
+        )
     }
+}
+
+#[get("/clients/<id>/delete")]
+pub fn delete(id: i32) -> Template {
+    let new_list = client_service::delete_client(id);
+    Template::render("clients/index", context! {clients_list: &new_list})
 }

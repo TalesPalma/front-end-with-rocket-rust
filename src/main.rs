@@ -31,6 +31,7 @@ fn rocket() -> _ {
                 clients_controller::new,
                 clients_controller::created,
                 clients_controller::edit,
+                clients_controller::delete,
             ],
         )
         .mount("/static", FileServer::from(relative!("static")))
