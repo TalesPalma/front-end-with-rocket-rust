@@ -19,3 +19,11 @@ pub fn get_clients() -> Vec<Client> {
         },
     ]
 }
+
+pub fn insert_client(clinent: Client) -> Client {
+    Client {
+        id: 4,
+        name: clinent.name,
+        email: clinent.email,
+    }
+}

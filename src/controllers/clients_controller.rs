@@ -8,3 +8,8 @@ pub fn clientes() -> Template {
     let clients = get_clients();
     Template::render("clients/index", context! {clients_list: &clients})
 }
+
+#[get("/clientes/new")]
+pub fn new() -> Template {
+    Template::render("clients/new", context! {})
+}

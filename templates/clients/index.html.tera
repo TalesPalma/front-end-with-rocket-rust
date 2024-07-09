@@ -5,6 +5,7 @@
 {% block content %}  
   <!-- Tabela de Clientes -->
   <div class="container mt-4">
+  <a href="/clientes/new" class="btn btn-primary">Novo</a>
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr>

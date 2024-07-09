@@ -18,10 +18,11 @@ fn rocket() -> _ {
             "/",
             routes![
                 home_controller::index,
-                clients_contoller::clientes,
                 home_controller::hello,
                 sobre_controller::sobre,
-                services_controller::servicos
+                services_controller::servicos,
+                clients_controller::clientes,
+                clients_controller::new,
             ],
         )
         .mount("/static", FileServer::from(relative!("static")))
