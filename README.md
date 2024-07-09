@@ -10,22 +10,6 @@ Este é um projeto onde criei um site todo com Rust usando o Rocket e templates 
 - `serde`: Versão 1.0.204 com a feature `derive`
 - `serde_json`: Versão 1.0.120
 
-## Estrutura do Projeto
-
-O projeto possui a seguinte estrutura:
-
-rocket-simples/
-├── Cargo.toml
-├── src/
-│ ├── main.rs
-├── templates/
-│ ├── layouts/
-│ │ ├── application.html
-│ ├── clientes/
-│ │ ├── index.html
-│ │ ├── new.html
-└── README.md
-
 
 ## Como Iniciar o Aplicativo
 
@@ -69,13 +53,13 @@ Adicionar Novo Cliente
 
 Acesse a URL http://localhost:8000/clientes/new para adicionar um novo cliente.
 
-### Código Fonte
+## Código Fonte
 
 [https://github.com/talespalma/rocket-simples](https://github.com/talespalma/rocket-simples)
 
-### Desenvolvido por: Tales Palma
+## Desenvolvido por: Tales Palma
 
-### Contato
+## Contato
 
 [https://github.com/talespalma](https://github.com/talespalma)
 [https://www.linkedin.com/in/tales-palma/](https://www.linkedin.com/in/tales-palma/)

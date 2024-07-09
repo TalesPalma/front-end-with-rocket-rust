@@ -29,6 +29,8 @@ fn rocket() -> _ {
                 services_controller::services,
                 clients_controller::clients,
                 clients_controller::new,
+                clients_controller::created,
+                clients_controller::edit,
             ],
         )
         .mount("/static", FileServer::from(relative!("static")))

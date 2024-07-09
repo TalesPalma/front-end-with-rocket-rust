@@ -5,7 +5,7 @@
 {% block content %}  
   <!-- Tabela de Clientes -->
   <div class="container mt-4">
-  <a href="/clientes/new" class="btn btn-primary">Novo</a>
+  <a href="/clients/new" class="btn btn-primary">Novo</a>
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr>
@@ -24,7 +24,7 @@
           <td>{{client.email}}</td>
           <td>(11) 9999-8888</td>
           <td>
-            <a href="#" class="btn btn-primary btn-sm">Editar</a>
+            <a href="/clients/{{client.id}}/edit" class="btn btn-primary btn-sm">Editar</a>
             <a href="#" class="btn btn-danger btn-sm ml-2">Excluir</a>
           </td>
         </tr>
