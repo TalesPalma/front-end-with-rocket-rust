@@ -1,5 +1,11 @@
 #[macro_use]
-mod controllers;
+mod controllers {
+    pub mod about_controller;
+    pub mod clients_controller;
+    pub mod home_controller;
+    pub mod services_controller;
+} //Another approach to declaring modules
+
 mod models;
 mod services;
 
@@ -19,9 +25,9 @@ fn rocket() -> _ {
             routes![
                 home_controller::index,
                 home_controller::hello,
-                sobre_controller::sobre,
-                services_controller::servicos,
-                clients_controller::clientes,
+                about_controller::about,
+                services_controller::services,
+                clients_controller::clients,
                 clients_controller::new,
             ],
         )
