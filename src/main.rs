@@ -20,7 +20,8 @@ fn rocket() -> _ {
                 home_controller::index,
                 clients_contoller::clientes,
                 home_controller::hello,
-                sobre_controller::sobre
+                sobre_controller::sobre,
+                services_controller::servicos
             ],
         )
         .mount("/static", FileServer::from(relative!("static")))

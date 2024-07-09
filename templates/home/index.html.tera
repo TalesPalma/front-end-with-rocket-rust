@@ -10,9 +10,10 @@
     }
 
     .jumbotron {
-      background-image: url('https://via.placeholder.com/1500x600');
-      background-size: cover;
+      background-image: url("/static/img/guts.png") ;
+      background-size: fill;
       color: white;
+      height: 400px;
       text-align: center;
       padding: 100px 0;
       margin-bottom: 0;
